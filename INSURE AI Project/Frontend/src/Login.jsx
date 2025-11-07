@@ -1,89 +1,53 @@
-import React, { useState } from "react";
+// App.jsx
+import React from "react";
+import "./App.css";
 
 function LoginPage() {
-const [email, setEmail] = useState("");
-const [password, setPassword] = useState("");
+  return (
+    <div className="container">
+      <header className="navbar">
+        <div className="brand">Shieldify Ai</div>
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#login">Login</a>
+          <a href="#signup">Sign Up</a>
+          <a href="#about">About</a>
+        </nav>
+      </header>
 
-const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(`Email: ${email}\nPassword: ${password}`);
-};
+      <main>
+        <section className="hero" id="home">
+          <h1>Protect What Matters Most</h1>
+          <p>AI-powered insurance simplified and secure.</p>
+          <button className="get-started">Get Started</button>
+        </section>
 
-return (
-    <div style={styles.container}>
-<div style={styles.box}>
-        <h2 style={styles.title}>Login</h2>
-        <form onSubmit={handleSubmit}>
-          <div style={styles.inputGroup}>
-            <label>Email</label>
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              style={styles.input}
-            />
-          </div>
+        <section className="services">
+          <h2>Our Insurance Types</h2>
+          <ul>
+            <li>Health Insurance</li>
+            <li>Life Insurance</li>
+            <li>Vehicle Insurance</li>
+            <li>Home Insurance</li>
+            <li>Travel Insurance</li>
+            {/* Add more as needed */}
+          </ul>
+        </section>
 
-          <div style={styles.inputGroup}>
-            <label>Password</label>
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-              style={styles.input}
-            />
-          </div>
+        <section className="about" id="about">
+          <h2>About Shieldify Ai</h2>
+          <p>
+            Shieldify Ai combines technology and insurance expertise to offer smart,
+            affordable, and hassle-free protection for individuals and families.
+          </p>
+        </section>
+      </main>
 
-          <button type="submit" style={styles.button}>
-            Login
-          </button>
-        </form>
-      </div>
+      <footer>
+        <small>© {new Date().getFullYear()} Shieldify Ai. All rights reserved.</small>
+      </footer>
     </div>
   );
 }
-
-// Basic inline CSS styles
-const styles = {
-  container: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    height: "100vh",
-    backgroundColor: "#0b0b0bff",
-  },
-  box: {
-    backgroundColor: "black",
-    padding: "30px",
-    borderRadius: "8px",
-    boxShadow: "0 0 8px rgba(0,0,0,0.1)",
-    width: "300px",
-  },
-  title: {
-    textAlign: "center",
-    marginBottom: "20px",
-  },
-  inputGroup: {
-    marginBottom: "15px",
-    display: "flex",
-    flexDirection: "column",
-  },
-  input: {
-    padding: "8px",
-    fontSize: "14px",
-    marginTop: "5px",
-  },
-  button: {
-    width: "100%",
-    padding: "10px",
-    backgroundColor: "#007bff",
-    color: "white",
-    border: "none",
-    borderRadius: "4px",
-    cursor: "pointer",
-  },
-};
 
 export default LoginPage;

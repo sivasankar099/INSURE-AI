@@ -1,0 +1,92 @@
+/* App.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f2f5fa;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 10px 0;
+  background: #fff;
+}
+
+.brand {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #2b3a67;
+}
+
+nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #2b3a67;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  background: #eef3fd;
+  text-align: center;
+  padding: 48px 16px 32px 16px;
+  margin: 32px 0 16px 0;
+  border-radius: 8px;
+}
+
+.get-started {
+  margin-top: 18px;
+  background: #2b3a67;
+  color: #fff;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.get-started:hover {
+  background: #1e2747;
+}
+
+.services {
+  margin: 32px 0;
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px 16px;
+}
+
+.services ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.services li {
+  padding: 6px 0;
+  color: #2b3a67;
+}
+
+.about {
+  margin: 32px 0;
+  background: #eef3fd;
+  border-radius: 6px;
+  padding: 20px 16px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #767676;
+  font-size: 0.9em;
+}
